@@ -179,15 +179,7 @@ class MockTradingEnvironment:
         total_value += self.cash  # Adding cash holdings to total portfolio value
         print(f"Total Portfolio Value: {total_value}")
 
-
-    def safe_divide(numerator, denominator, default=np.nan):
-        # Perform safe division, return default if denominator is zero or NaN."""
-        if denominator == 0 or np.isnan(denominator):
-            return default
-        else:
-            return numerator / denominator
-
-
+    
     def calculate_performance_metrics(self, days, date):
         # Assuming initial portfolio value is the initial fund
         initial_portfolio_value = self.initial_fund
